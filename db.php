@@ -20,4 +20,3 @@ try {
     echo 'Tilkoblingsfeil: ' . $e->getMessage();
     exit;
 }
-?>
