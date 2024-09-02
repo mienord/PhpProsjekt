@@ -9,15 +9,28 @@ if (!isset($_SESSION['user_id'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <title>Admin</title>
+    <link rel="stylesheet" href="site/css/main.css?=v1.0">
 </head>
+
 <body>
-    <h1>Velkommen til adminpanelet!</h1>
-    <p>Hei, <?php echo htmlspecialchars($_SESSION['username']); ?>. Du er nå logget inn.</p>
+    <div class="tabs">
+
+        <input type="radio" name="tabs" id="tabtwo" checked="checked">
+        <label for="tabtwo">Velkommen</label>
+        <div class="tab">
+            <h2>Velkommen til adminpanelet!</h2>
+            <p>Hei, <?php echo htmlspecialchars($_SESSION['username']); ?>. Du er nå logget inn.</p>
+        </div>
+
+        <input type="radio" name="tabs" id="tabthree">
+        <label for="tabthree">Rom Oversikt</label>
+        <div class="tab">
+            <h2>Tab Three Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
     <a href="logout.php">Logg ut</a>
+
 </body>
-</html>
