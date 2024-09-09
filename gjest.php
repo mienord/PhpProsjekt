@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="site/css/main.css?=v1.0">
+    <link rel="stylesheet" href="site/css/main.css?=v2.0">
 </head>
 
 <body>
@@ -12,29 +12,36 @@
         <input type="radio" name="tabs" id="tabone" checked="checked">
         <label for="tabone">Hjem</label>
         <div class="tab">
-            <h2>Velkommen til oss!</h2>
+            <h1>Velkommen til oss!</h1>
             <p>Her kan du booke et opphold hos oss! Velg dato og antall personer for å se hvilke rom som er tilgjengelig.</p>
 
-            <h1>Søk etter overnatting</h1>
+            <h2>Søk etter overnatting</h2>
             <form action="search.php" method="POST">
-                <label for="innsjekk">Innsjekkingsdato:</label>
-                <input type="date" id="innsjekk" name="innsjekk" required>
-                <br><br>
+                <div class="form-fields">
+                    <div class="form-group">
+                        <label for="innsjekk">Innsjekkingsdato:</label>
+                        <input type="date" id="innsjekk" name="innsjekk" required>
+                    </div>
 
-                <label for="utsjekk">Utsjekkingsdato:</label>
-                <input type="date" id="utsjekk" name="utsjekk" required>
-                <br><br>
+                    <div class="form-group">
+                        <label for="utsjekk">Utsjekkingsdato:</label>
+                        <input type="date" id="utsjekk" name="utsjekk" required>
+                    </div>
 
-                <label for="voksne">Antall voksne:</label>
-                <input type="number" id="voksne" name="voksne" min="1" required>
-                <br><br>
+                    <div class="form-group">
+                        <label for="voksne">Antall voksne:</label>
+                        <input type="number" id="voksne" name="voksne" min="1" required>
+                    </div>
 
-                <label for="barn">Antall barn:</label>
-                <input type="number" id="barn" name="barn" min="0" required>
-                <br><br>
+                    <div class="form-group">
+                        <label for="barn">Antall barn:</label>
+                        <input type="number" id="barn" name="barn" min="0" required>
+                    </div>
+                </div>
 
                 <input type="submit" value="Søk">
             </form>
+
         </div>
 
         <input type="radio" name="tabs" id="tabtwo">
