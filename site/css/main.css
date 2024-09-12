@@ -1,36 +1,43 @@
 /**
  * Tabs
  */
-.tabs {
-	display: flex;
-	flex-wrap: wrap; 
+ .tabs {
+  display: flex;
+  flex-wrap: wrap; 
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
 }
 .tabs label {
-	order: 1; 
-	display: block;
-	padding: 1rem 2rem;
-	margin-right: 0.2rem;
-	cursor: pointer;
-  background: white;
+  order: 1; 
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background: #f0f4f8;
   font-weight: bold;
-  transition: background ease 0.2s;
+  border-radius: 8px 8px 0 0;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 .tabs .tab {
   order: 99; 
   flex-grow: 1;
-	width: 100%;
-	display: none;
-  padding: 1rem;
-  background: lightblue;
+  width: 100%;
+  display: none;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 0 0 8px 8px;
 }
 .tabs input[type="radio"] {
-	display: none;
+  display: none;
 }
 .tabs input[type="radio"]:checked + label {
-	background: lightblue;
+  background: lightblue;
+  color: #ffffff;
 }
 .tabs input[type="radio"]:checked + label + .tab {
-	display: block;
+  display: block;
 }
 
 @media (max-width: 45em) {
@@ -47,17 +54,81 @@
 
 /**
  * Generic Styling
-*/
+ */
 body {
-  background: white;
+  background: #f0f4f8;
   min-height: 100vh;
-	box-sizing: border-box;
-	padding-top: 10vh;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  box-sizing: border-box;
+  padding-top: 5vh;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
   font-weight: 300;
-  line-height: 1.5;
-  max-width: 60rem;
+  line-height: 1.6;
+  max-width: 80rem;
   margin: 0 auto;
   font-size: 100%;
 }
 
+/**
+ * Form Styling
+ */
+form {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 1rem;
+}
+
+.form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-fields .form-group {
+  flex: 1;
+  min-width: 100px; /* Adjust as needed */
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+form input[type="date"],
+form input[type="number"] {
+  width: 90%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input[type="submit"] {
+  background: lightblue;
+  color: #ffffff;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background: green;
+}
+
+/* Flexbox layout for form fields */
+@media (max-width: 45em) {
+  .form-fields {
+    flex-direction: column;
+  }
+
+  .form-fields .form-group {
+    min-width: 100%;
+  }
+}
