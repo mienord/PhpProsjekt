@@ -132,3 +132,42 @@ form input[type="submit"]:hover {
     min-width: 100%;
   }
 }
+
+/* New CSS for the centered rectangle box with pastel theme */
+.center-box {
+  background-color: white; /* White background for the box */
+  width: 600px; /* Increase width */
+  padding: 50px; /* Increase padding */
+  border-radius: 15px; /* Larger rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  text-align: center;
+  margin: auto;
+}
+
+.center-box h1 {
+  margin-bottom: 30px; /* Larger margin */
+  font-size: 36px; /* Larger font size */
+  color: #333; /* Keep dark text for contrast */
+}
+
+.center-box a {
+  display: inline-block;
+  margin: 20px;
+  padding: 15px 30px; /* Larger button size */
+  background-color: #ffd1dc; /* Pastel pink */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px; /* Slightly larger radius */
+  font-size: 18px; /* Larger font size */
+  font-weight: bold; /* Bold text for buttons */
+  transition: background 0.3s ease;
+}
+
+.center-box a:hover {
+  background-color: #ff9bb3; /* Darker pink on hover */
+}
+
+/* Ensures the body and html are centered with flexbox */
+html, body {
+  background-color: white; /* White background for the page */
+}
