@@ -1,6 +1,4 @@
-/**
- * Tabs
- */
+/* CSS for tabs, både på toppen av siden og for rombooking */
  .tabs {
   display: flex;
   flex-wrap: wrap; 
@@ -52,11 +50,9 @@
   }
 }
 
-/**
- * Generic Styling
- */
+/*  Generell styling */
 body {
-  background: #f0f4f8;
+  background-color: white;
   min-height: 100vh;
   box-sizing: border-box;
   padding-top: 5vh;
@@ -68,9 +64,7 @@ body {
   font-size: 100%;
 }
 
-/**
- * Form Styling
- */
+/* Form Styling - spesielt for rombookings formsa */
 form {
   background: #ffffff;
   border-radius: 8px;
@@ -88,7 +82,7 @@ form {
 
 .form-fields .form-group {
   flex: 1;
-  min-width: 100px; /* Adjust as needed */
+  min-width: 100px;
 }
 
 form label {
@@ -133,41 +127,41 @@ form input[type="submit"]:hover {
   }
 }
 
-/* New CSS for the centered rectangle box with pastel theme */
+/* CSS for index siden */
 .center-box {
-  background-color: white; /* White background for the box */
-  width: 600px; /* Increase width */
-  padding: 50px; /* Increase padding */
-  border-radius: 15px; /* Larger rounded corners */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  background-color: white; 
+  width: 600px; 
+  padding: 50px; 
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
   margin: auto;
 }
 
 .center-box h1 {
-  margin-bottom: 30px; /* Larger margin */
-  font-size: 36px; /* Larger font size */
-  color: #333; /* Keep dark text for contrast */
+  margin-bottom: 30px; 
+  font-size: 36px; 
+  color: #333; 
 }
 
 .center-box a {
   display: inline-block;
   margin: 20px;
-  padding: 15px 30px; /* Larger button size */
-  background-color: #ffd1dc; /* Pastel pink */
+  padding: 15px 30px; 
+  background-color: #ffd1dc; 
   color: white;
   text-decoration: none;
-  border-radius: 8px; /* Slightly larger radius */
-  font-size: 18px; /* Larger font size */
-  font-weight: bold; /* Bold text for buttons */
+  border-radius: 8px; 
+  font-size: 18px; 
+  font-weight: bold; 
   transition: background 0.3s ease;
 }
 
 .center-box a:hover {
-  background-color: #ff9bb3; /* Darker pink on hover */
+  background-color: #ff9bb3;
 }
 
-/* Ensures the body and html are centered with flexbox */
-html, body {
-  background-color: white; /* White background for the page */
+/* CSS for login og registrer siden */
+.login button {
+ background-color: green;
 }
