@@ -40,19 +40,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Logg inn</title>
+    <link rel="stylesheet" href="site/css/main.css?=v3.0">
 </head>
 
 <body>
-    <h1>Logg inn</h1>
-    <form method="post">
-        <label for="username">Brukernavn:</label>
-        <input type="text" name="username" required><br>
+    <div class="login">
+        <h1>Logg inn</h1>
+        <form method="post">
+            <label for="username">Brukernavn:</label>
+            <input type="text" name="username" required><br>
 
-        <label for="password">Passord:</label>
-        <input type="password" name="password" required><br>
+            <label for="password">Passord:</label>
+            <input type="password" name="password" required><br>
 
-        <button type="submit">Logg inn</button>
-    </form>
+            <button type="submit">Logg inn</button>
+        </form>
+    </div>
 </body>
 
 </html>
