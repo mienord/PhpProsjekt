@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require '../site/inc/db.inc.php';
 
 // Start a session if it hasn't already been started
 session_start();
@@ -13,22 +13,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
-    if ($user && password_verify($password, $user['password'])) {
-        // Store user data in the session
+    if (!$user) {
+        // If the user is not found in the database
+        echo "Brukeren ble ikke funnet.";
+    } elseif ($user && password_verify($password, $user['password'])) {
+        // If the password is correct, store user data in session
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];  // Store the user's role in the session
 
-        // Check the user's role and redirect accordingly
+        // Redirect based on role
         if ($user['role'] === 'admin') {
             header("Location: admin.php");
-        } else if ($user['role'] === 'guest') {
+        } else if ($user['role'] === 'user') {
             header("Location: gjest.php");  // Changed 'gjest.php' to 'guest.php' for consistency
         } else {
             echo "Ukjent brukerrolle.";
         }
         exit;
     } else {
+        // If the password doesn't match
         echo "Feil brukernavn eller passord.";
     }
 }
@@ -40,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Logg inn</title>
-    <link rel="stylesheet" href="site/css/main.css?=v3.0">
+    <link rel="stylesheet" href="../site/css/main.css?=v3.0">
 </head>
 
 <body>
