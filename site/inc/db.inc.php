@@ -1,3 +1,4 @@
+<!-- Tilkoblingsfil for databasen -->
 <?php
 // Databasekonfigurasjon
 $host = 'localhost';         // Databasevert (typisk localhost)

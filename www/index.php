@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="site/css/main.css?=v3.0">
+<link rel="stylesheet" href="../site/css/main.css?=v3.0">
 
 <body>
 

@@ -165,3 +165,23 @@ form input[type="submit"]:hover {
 .login button {
  background-color: green;
 }
+
+.romoversikt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Avstand mellom rom */
+  max-width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Lys bakgrunnsfarge */
+  border-radius: 8px; /* Runde hjørner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lett skygge */
+}
+
+.romoversikt div.room {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #ffffff; /* Hvit bakgrunn for hvert rom */
+  border-left: 4px solid lightblue; /* Farget kantlinje på venstre side */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Litt skygge rundt hvert rom */
+}
+
