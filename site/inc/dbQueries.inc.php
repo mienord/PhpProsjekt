@@ -32,7 +32,7 @@ function getAvailableRooms($innsjekk, $utsjekk, $voksne, $total_personer, $pdo)
 // Henter romdetaljer for adminsiden
 function getAllRooms($pdo)
 {
-    $sql = "SELECT rooms.room_number, room_types.name, rooms.status FROM rooms JOIN room_types ON rooms.room_type_id = room_types.id";
+    $sql = "SELECT rooms.room_number, room_types.name, room_types.max_adults, room_types.max_children, rooms.status FROM rooms JOIN room_types ON rooms.room_type_id = room_types.id";
     $stmt = $pdo->query($sql);
     return $stmt->fetchAll();
 }
