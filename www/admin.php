@@ -35,7 +35,7 @@ if (!isset($_SESSION['user_id'])) {
                 $alle_rom = getAllRooms($pdo);
 
                 // Vis romnummer og tilhørende romtype-informasjon
-                foreach ($alle_room as $rom) {
+                foreach ($alle_rom as $rom) {
                     echo "<div class='room'>";
                     echo "<b>Romnummer: " . $rom['room_number'] . "</b><br>";
                     echo "Rom type: " . $rom['name'] . "<br>";
