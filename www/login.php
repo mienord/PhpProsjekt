@@ -44,13 +44,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Logg inn</title>
-    <link rel="stylesheet" href="../site/css/main.css?=v3.0">
+    <link rel="stylesheet" href="../site/css/login.css">
 </head>
 
 <body>
-    <div class="login">
-        <h1>Logg inn</h1>
+    <div class="loginbox">
         <form method="post">
+        <h1>Logg inn</h1>
             <label for="username">Brukernavn:</label>
             <input type="text" name="username" required><br>
 
