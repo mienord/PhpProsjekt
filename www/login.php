@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($user['role'] === 'admin') {
             header("Location: admin.php");
         } else if ($user['role'] === 'user') {
-            header("Location: gjest.php");  // Changed 'gjest.php' to 'guest.php' for consistency
+            header("Location: guest.php");
         } else {
             echo "Ukjent brukerrolle.";
         }
