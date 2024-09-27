@@ -161,10 +161,6 @@ form input[type="submit"]:hover {
   background-color: #ff9bb3;
 }
 
-/* CSS for login og registrer siden */
-.login button {
- background-color: green;
-}
 
 .romoversikt {
   display: flex;

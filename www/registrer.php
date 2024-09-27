@@ -27,9 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <title>Registrer deg</title>
+    <link rel="stylesheet" href="../site/css/login.css">
 </head>
 
 <body>
+<div class="loginbox">
     <h1>Registrer deg som bruker</h1>
     <form method="post">
         <label for="firstname">Fornavn:</label>
