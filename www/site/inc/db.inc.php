@@ -3,8 +3,8 @@
 // Databasekonfigurasjon
 $host = 'localhost';         // Databasevert (typisk localhost)
 $dbname = 'rombooking';      // Navnet på databasen
-$username = 'root';          // Databasebrukernavn
-$password = '';              // Databasepassord (la stå tom hvis ingen passord)
+$dbUsername = 'root';          // Databasebrukernavn
+$dbPassword = '';              // Databasepassord (la stå tom hvis ingen passord)
 
 // Forsøk å opprette en tilkobling til databasen
 try {
@@ -15,7 +15,7 @@ try {
         PDO::ATTR_EMULATE_PREPARES   => false,                  // Deaktiver emulering av forberedte spørringer
     ];
 
-    $pdo = new PDO($dsn, $username, $password, $options);
+    $pdo = new PDO($dsn, $dbUsername, $dbPassword, $options);
 } catch (PDOException $e) {
     // Håndter tilkoblingsfeil
     echo 'Tilkoblingsfeil: ' . $e->getMessage();

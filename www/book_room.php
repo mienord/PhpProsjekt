@@ -2,7 +2,7 @@
 <html lang="no">
 
 <head>
-    <link rel="stylesheet" href="../site/css/main.css?=v2.0">
+    <link rel="stylesheet" href="site/css/main.css?=v2.0">
     <title>Booking bekreftelse</title>
 
 </head>
@@ -11,6 +11,7 @@
 
     <div class="confirmation-container">
         <?php
+        // Henter rom, insjekk & utsjekk dato, og romtype som ble bestilt
         if (isset($_GET['room_id'], $_GET['innsjekk'], $_GET['utsjekk'], $_GET['romtype'])) {
             $romnummer = $_GET['room_id'];
             $innsjekk = $_GET['innsjekk'];

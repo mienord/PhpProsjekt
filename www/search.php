@@ -1,13 +1,13 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../site/css/main.css?=v1.8">
+    <link rel="stylesheet" href="site/css/main.css?=v1.2.1">
 </head>
 
 <body>
 
     <?php
-    require_once '../site/inc/dbQueries.inc.php'; // Inkluderer filen med spørringer
+    require_once 'site/inc/dbQueries.inc.php'; // Inkluderer filen med spørringer
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Hent data fra formen
@@ -32,7 +32,7 @@
                 echo '<div class="room-details">';
                 echo '<h3>Romnummer: ' . $rom['room_number'] . ' (' . $rom['name'] . ')</h3>';
                 echo '<div class="room-info">Maks voksne: ' . $rom['max_adults'] . '</div>';
-                echo '<div class="room-info">Maks barn: ' . $rom['max_children'] . '</div>';
+                echo '<div class="room-info">Maks barn: ' . $rom['max_children'] . '</div><br>';
                 // Send romnummer, innsjekkdato, utsjekkdato via URL-parametere
                 echo '<a href="book_room.php?room_id=' . $rom['room_number'] .
                     '&innsjekk=' . urlencode($innsjekk) .
