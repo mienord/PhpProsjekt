@@ -161,26 +161,6 @@ form input[type="submit"]:hover {
   background-color: #ff9bb3;
 }
 
-
-.romoversikt {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Avstand mellom rom */
-  max-width: 300px;
-  padding: 20px;
-  background-color: #f9f9f9; /* Lys bakgrunnsfarge */
-  border-radius: 8px; /* Runde hjørner */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lett skygge */
-}
-
-.romoversikt div.room {
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #ffffff; /* Hvit bakgrunn for hvert rom */
-  border-left: 4px solid lightblue; /* Farget kantlinje på venstre side */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Litt skygge rundt hvert rom */
-}
-
 /* Container for the room listing */
 .room-container {
   display: grid;
@@ -198,6 +178,10 @@ form input[type="submit"]:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease;
+  padding: 20px; /* Added padding to space out the content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content fills the card evenly */
 }
 
 /* Room card hover effect */
@@ -206,23 +190,20 @@ form input[type="submit"]:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Room details */
-.room-details {
-  padding: 15px;
-}
-
 /* Room number and type */
 .room-details h3 {
   font-size: 1.2rem;
   color: #333;
   margin: 0 0 10px;
+  padding-bottom: 10px; /* Adjusted to ensure padding is consistent */
 }
 
 /* Room info (like max adults, max children, etc.) */
 .room-info {
   color: #555;
   font-size: 0.9rem;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
+  padding-bottom: 2px; /* Consistent padding between info items */
 }
 
 /* Button to book the room */
@@ -236,6 +217,7 @@ form input[type="submit"]:hover {
   border-radius: 5px;
   font-size: 0.9rem;
   transition: background-color 0.2s ease;
+  margin-top: auto; /* Ensures the button stays at the bottom */
 }
 
 /* Button hover effect */

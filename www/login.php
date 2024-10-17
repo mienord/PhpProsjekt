@@ -1,5 +1,5 @@
 <?php
-require '../site/inc/db.inc.php';
+require 'site/inc/db.inc.php';
 
 // Start a session if it hasn't already been started
 session_start();
@@ -44,13 +44,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Logg inn</title>
-    <link rel="stylesheet" href="../site/css/login.css">
+    <link rel="stylesheet" href="site/css/login.css">
 </head>
 
 <body>
     <div class="loginbox">
         <form method="post">
-        <h1>Logg inn</h1>
+            <h1>Logg inn</h1>
             <label for="username">Brukernavn:</label>
             <input type="text" name="username" required><br>
 

@@ -2,7 +2,7 @@
 <html lang="no">
 
 <head>
-    <link rel="stylesheet" href="../site/css/main.css?=v.03">
+    <link rel="stylesheet" href="site/css/main.css?=v7.09">
 </head>
 
 <body>
